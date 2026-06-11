@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+    #########################################
+    #                                       #
+    #    Christopher Hamfield               #
+    #                aka Hamfield518        #
+    #   Using F12, huh?                     #
+    #       Clever, clever.                 #
+    #    Welcome to my world, stranger!     # 
+    #########################################
+-->
+<meta name="description" content="The home page of Christopher Hamfield's personal website.">
+<meta name="keywords" content="personal, website, HTML, CSS, NeoCities">
+<meta name="author" content="Christopher Hamfield">
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<link rel="icon" type="image/jpeg" href="chamf_imgs/homepage/favicon.jpg">
+<title>C. Hamf. WebSite</title>
+<style>
+/* the background image file, positioning, blur effect etc. */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('chamf_imgs/homepage/MainWallp.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+/* p elements I guess idk */
+p {
+    color: white;
+    background: rgba(64, 64, 64, 0.5);
+}
+/* I used h1 quite a bit */
+h1 {
+    color: red;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(to bottom, grey, black);
+    z-index: -1;
+}
+/* plain h2 */
+h2 {
+    color: #FF0000;
+    margin: 4px 0;
+    padding: 0;
+}
+/* all h3 alements and all the desktop only text elements */
+h3 {
+    color: white;
+    background: linear-gradient(to bottom, grey, black);
+    z-index: -1;
+    margin: 4px 0;
+    padding: 0;
+}
+
+/* the styling and animation for the image of my face */
+.mygreasyface {
+    border-radius: 10px;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 1px 3px rgba(0,0,0,0.3);
+    animation: facialPulse 3s ease-in-out infinite;
+    display: inline-block; 
+}
+/* the image of my greasy face pulsing */ 
+@keyframes facialPulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(0.7); } 
+    100% { transform: scale(1); }  
+}
+/* web browser icons corner radius */
+.webbrowsericon {
+    border-radius: 50%;
+}
+
+/* the buttons are in a container for horrizontal arrangement */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 0px 4px;
+    margin: 0px 0px;
+}
+/* default base state button appearence */
+.button {
+    display: inline-block;
+    padding: 4px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(to bottom,
+        rgba(128, 0, 128, 0.8) 0%,
+        rgba(148, 0, 148, 0.8) 50%,
+        rgba(168, 50, 168, 0.8) 51%,
+        rgba(200, 100, 200, 0.8) 100%
+    );
+    border-radius: 6px;
+    border: 1px solid #800080;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 1px 3px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.7);
+    min-width: 12px;
+}
+/* appearence of buttons when they're hovered over */
+.button:hover {
+    background: linear-gradient(to bottom,
+        rgba(160, 40, 160, 0.8) 0%,
+        rgba(180, 80, 180, 0.8) 50%,
+        rgba(200, 120, 200, 0.8) 51%,
+        rgba(220, 160, 220, 0.8) 100%
+    );
+    padding: 2px 4px;
+}
+/* appearence of buttons when they are clicked */
+.button:active, .desktoponlybutton:active {
+    padding: 10px 15px;
+    background: linear-gradient(to bottom,
+        rgba(100, 0, 100, 0.8) 2%,
+        rgba(128, 0, 128, 0.8) 69%,
+        rgba(148, 0, 148, 0.8) 80%,
+        rgba(200, 100, 200, 0.8) 100%
+    );
+}
+/* Copyright 2024 type shi */
+footer {
+    background: linear-gradient(to right, black, gray);
+    color: red;
+    padding: 5px 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* the troll spinners */
+.trollspinner {
+    position: fixed;
+    animation: spin 10s linear infinite, dvdmove 30s linear infinite;
+    will-change: transform, top, left;
+    z-index: 9999;
+}
+.trollspinner1 {
+    animation: spin 10s linear infinite, dvdmove 30s linear infinite;
+}
+.trollspinner2 {
+    animation: spin 5s linear infinite, dvdmove 15s linear infinite;
+}
+.trollspinner3 {
+    animation: spin 4s linear infinite, dvdmove 12s linear infinite;
+}
+
+.trollspinner4 {
+    animation: spin 3s linear infinite, dvdmove 8s linear infinite;
+}
+
+.trollspinner5 {
+    animation: spin 2s linear infinite, dvdmove 6s linear infinite;
+}
+
+.trollspinner6 {
+    animation: spin 1s linear infinite, dvdmove 3s linear infinite;
+}
+/* spinning for the trollfaces */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* DVD Screensaver bounce effect, used for spinning trollfaces */
+@keyframes dvdmove {
+    0%   { top: 5vh; left: 10vw; }
+    10%  { top: 20vh; left: 80vw; }
+    20%  { top: 60vh; left: 30vw; }
+    30%  { top: 70vh; left: 70vw; }
+    40%  { top: 10vh; left: 50vw; }
+    50%  { top: 90vh; left: 90vw; }
+    60%  { top: 40vh; left: 20vw; }
+    70%  { top: 80vh; left: 10vw; }
+    80%  { top: 30vh; left: 60vw; }
+    90%  { top: 50vh; left: 5vw; }
+    100% { top: 5vh; left: 10vw; }
+}
+</style>
+</head>
+<body>
+<div style="display: none;">
+  <audio autoplay loop>
+    <source src="mp3/onestop.mid.mp3" type="audio/mpeg">
+  </audio>
+</div>
+    <center>
+        <h1>Welcome to the personal website of Christopher Hamfield</h1>
+        <p>welcome to the welcum nice 2 see u very good great heavens</p>
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner1" width="128" height="128">
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner2" width="64" height="64">
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner3" width="48" height="48">
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner4" width="32" height="32">
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner5" width="20" height="20">
+        <img src="chamf_imgs/homepage/troll1.gif" alt="Trollololololololol" class="trollspinner trollspinner6" width="16" height="16">
+        <h6>.</h6>
+        <p>$</p>
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+             <p>Please treat some contents as satire.</p>
+        </marquee>
+        <img src="chamf_imgs/homepage/website.png" alt="WWW Logo" width="200" height="256">
+       <!--my greasy face hhaha-->
+        <img src="chamf_imgs/homepage/myself.jpg" class="mygreasyface" alt="A picture of me." width="420" height="360">
+        <!--compatibility explanation-->
+        <img src="chamf_imgs/homepage/website.png" alt="WWW Logo" width="200" height="256">
+        <h3 class="desktoponly_text">My website has great compatibility for different web browsers:</h3>
+        <img src="chamf_imgs/homepage/browsericons/ie11.jpg" alt="Internet Explorer Logo" class="webbrowsericon" width="32" height="32">
+        <img src="chamf_imgs/homepage/browsericons/firefox.jpg" alt="Mozilla FireFox Logo" class="webbrowsericon" width="32" height="32">
+        <img src="chamf_imgs/homepage/browsericons/safari.jpg" alt="Apple safari Logo" class="webbrowsericon" width="32" height="32">
+        <img src="chamf_imgs/homepage/browsericons/chrome.jpg" alt="Google Chrome Logo" class="webbrowsericon" width="32" height="32">
+        <img src="chamf_imgs/homepage/browsericons/Made%20for%20ipad.PNG" alt="Made for iPad Logo" class="webbrowsericon" width="67" height="32">
+        <img src="chamf_imgs/homepage/browsericons/bravebrowser.jpg" alt="Brave Browser Logo" class="webbrowsericon" width="32" height="32">
+        <img src="chamf_imgs/homepage/browsericons/opera.jpg" alt="Opera Browser Logo" class="webbrowsericon" width="32" height="32">
+        
+        <!--supported web browsers-->
+        <h3>And operating systems: </h3>
+        <img src="chamf_imgs/homepage/oslogos/maclogo.png" alt="Mac OS Compatibility" width="64" height="64">
+        <img src="chamf_imgs/homepage/oslogos/wincompatibility2012_2025.png" alt="Windows Compatibility 11, 10, 8" width="200" height="64">
+        <img src="chamf_imgs/homepage/oslogos/win7compatibility.jpg" alt="Compatible With Windows 7" width="64" height="64">
+        <img src="chamf_imgs/homepage/oslogos/linux.jpg" alt="Compatible with linux" width="64" height="64">
+        <h3>Not optimized for mobile and never will be</h3>
+        <img src="chamf_imgs/homepage/nophone/noifone.png" alt="No iFones allowed." width="64" height="64">     
+        <img src="chamf_imgs/homepage/nophone/android_crying.gif" alt="Bugdroid android maskot crying" width="64" height="64">
+        <img src="chamf_imgs/homepage/nophone/android_crying.gif" alt="Bugdroid android maskot crying" width="64" height="64">
+        <img src="chamf_imgs/homepage/nophone/noifone.png" alt="No iFones allowed." width="64" height="64">     
+
+<!--contents (all sections linked-->
+    <h3>Me, Myself and I:</h3>
+        <h2><a href="sections/moreinfoabtme.html" class="button">Learn more about me as a person</a></h2>
+        <h2><a href="sections/contactme.html" class="button">Contact info & communication prefs</a></h2>
+         <h2><a href="sections/socmedusage.html" class="button">(anti)"social" media usage</a></h2>
+        <h2><a href="sections/photios.html" class="button">Goofy photos (outdated)</a></h2>
+                <h2><a href="sections/birthday.html" class="button">Countdown until my birthday</a></h2>
+        <h2><a href="sections/compsys.html" class="button">List of owned computer systems</a></h2>
+        <h2><a href="sections/crush.html" class="button">Who's my crush?</a></h2>
+    <h3>Misceleneous Sections: </h3>
+    <div class="button-container">
+        <h2><a href="sections/ws-purpose.html" class="button">Why does this exist?</a></h2> 
+        <h2><a href="sections/vids.html" class="button">Videos</a></h2>   
+    </div>
+    <h2><a href="sections/TOPNOTCHROMANCEPICKUPLINESFREEDOWNLOADNOVIRUSLATEST2025.html" class="button">Best pickup line of 2025 (Might not work in 2026)</a></h2>   
+<!--Not a part of this site, but also made by me-->
+    <h3>My other websites:</h3>
+    <div class="button-container">
+         <h2><a href="https://crawlhatch.neocities.org" class="button">The Crawlhatch Music Project</a></h2>
+         <h2><a href="https://chamfsites.neocities.org/" class="button">chamfsites</a></h2>
+    </div>
+<!--links to websites not made by me-->
+    <h3>Cool Neocities Websites That You Can Explore</h3>
+    <div class="button-container">
+        <h2 ><a href="https://crp48.neocities.org/" class="button">History of metallica</a></h2>
+        <h2><a href="https://breakingbad.neocities.org/" class="button">Breaking Bad (!!Sus Warning!!)</a></h2>
+    </div>
+
+    <h3>Other great websites</h3>
+    <div class="button-container">
+        <h2><a href="https://frutigeraeroarchive.org/" class="button">Fruitiger Aero Archive</a></h2>
+        <h2><a href="http://toastytech.com/" class="button">Toasty Tech</a></h2>
+        <h2><a href="https://home.snafu.de/tilman/index.html" class="button">Tilman Hausherr</a></h2> 
+    </div>
+    <h3>#mycodeistrashbutitworks</h3>
+
+<!--cool gifs yeah burning fire type shi-->
+        <img src="chamf_imgs/homepage/fireplace.gif" alt="Fire Gif" width="256" height="256">
+        <img src="chamf_imgs/homepage/fireplace.gif" alt="Fire Gif" width="256" height="256">
+        <img src="chamf_imgs/homepage/fireplace.gif" alt="Fire Gif" width="256" height="256">
+        <img src="chamf_imgs/homepage/fireplace.gif" alt="Fire Gif" width="256" height="256">
+        <!--Github logo at the bottom-->
+        <h3>Thanks for visiting</h3>
+        <img src="chamf_imgs/homepage/github.png" alt="Github logo">
+
+</center>
+    <footer>
+         <p>&copy; 2024-2026 Hamfield518- All rights reserved, lefts preserved.</p>
+    </footer>
+</body>
+</html>

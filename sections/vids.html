@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="icon" type="image/jpeg" href="https://hamfield518.neocities.org/chamf_imgs/vids/vid.jpg">
+    <title>Videos - C.Hamf. WebSite</title>
+
+    <style>
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../chamf_imgs/vids/BurningCandle.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+p {
+    color: red;
+    background: rgba(64, 64, 64, 0.5);
+}
+h1 {
+    color: red;
+    position: absolute;
+    top: 20;
+    left: 0; right: 0; bottom: 10;
+    background: linear-gradient(to bottom, grey, black);
+}
+
+h2 {
+    color: #FF0000;
+    margin: 4px 0;
+    padding: 0;
+}
+h2 a {
+    color: #FF0000;
+    text-decoration: none;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 0 4px;
+    margin: 0 0;
+    flex-wrap: wrap;
+}
+.button {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(to bottom,
+        rgba(200, 40, 40, 0.8) 0%,
+        rgba(220, 60, 60, 0.8) 50%,
+        rgba(240, 90, 90, 0.8) 51%,
+        rgba(255, 150, 150, 0.8) 100%
+    );
+    border-radius: 5px;
+    border: 1px solid #a12020;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 1px 3px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.7);
+    min-width: 10px;
+    margin: 8px;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom,
+        rgba(230, 80, 80, 0.8) 0%,
+        rgba(245, 120, 120, 0.8) 50%,
+        rgba(255, 170, 170, 0.8) 51%,
+        rgba(255, 200, 200, 0.8) 100%
+    );
+    padding: 2px 4px;
+}
+
+.button:active {
+    background: linear-gradient(to bottom,
+        rgba(160, 20, 20, 0.8) 2%,
+        rgba(200, 40, 40, 0.8) 69%,
+        rgba(220, 60, 60, 0.8) 80%,
+        rgba(255, 150, 150, 0.8) 100%
+    );
+}
+
+footer {
+    background: linear-gradient(to right, black, gray);
+    color: red;
+    padding: 5px 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Video container styling */
+.video-section {
+    background: rgba(64, 64, 64, 0.6);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 720px;
+    padding: 10px;
+}
+
+.video-title {
+    color: red;
+    margin-bottom: 6px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 1px 3px rgba(0,0,0,0.3);
+    margin-bottom: 8px;
+}
+    </style>
+</head>
+<body>
+<div style="display: none;">
+  <audio autoplay loop>
+    <source src="../mp3/PASSPORT.MID.mp3" type="audio/mpeg">
+  </audio>
+</div>
+<center>
+    <h1>Hamfield518 Videos Section</h1>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>More random/weird videos from Chris.</p>
+    <div class="video-section">
+        <h2 class="video-title">buttonschangertutorial.mp4</h2>
+        <iframe src="https://drive.google.com/file/d/1870iPKZdlaY03j1g6IJsVlJ7G1GpL4OC/preview" width="640" height="360" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-section">
+        <h2 class="video-title">Going for a swim</h2>
+        <iframe src="https://drive.google.com/file/d/1v4K0QUNjesGIukFXjyfBXnE8YalcYYK6/preview" width="640" height="360" allowfullscreen></iframe>
+    </div>
+   
+    <div class="video-section">
+        <h2 class="video-title">Video 3 Title</h2>
+        <iframe src="https://drive.google.com/file/d/FILE_ID_3/preview" width="640" height="360" allowfullscreen></iframe>
+    </div>
+    <img src="../chamf_imgs/vids/SubscribeYT.gif">
+        <div class="button-container">
+          <h2><a href="https://www.youtube.com/@hamfchannel/" class="button">Check out my YT channel</a></h2>
+          <h2><a href="../index.html" class="button">Go back to the homepage</a></h2>
+        </div>
+</center>
+
+<footer>
+    <p> &copy; 2024-2026 Hamfield518- all rights reserved, lefts preserved.</p>
+</footer>
+</body>
+</html>

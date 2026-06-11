@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="../chamf_imgs/lovecrap/Love_heart.jpg">
+    <title>Chris's Crush (No cap)</title>
+    <link href="https://hamfield518.neocities.org/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      p {
+        color: purple;
+        border: 2px solid grey;
+        background-color: black;
+        padding: 10px;
+        font-size: 20px
+      }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1px 4px;
+            margin: 0px  0px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 3px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            background: linear-gradient(to bottom,
+                rgba(200, 40, 40, 0.8) 0%,
+                rgba(220, 60, 60, 0.8) 50%,
+                rgba(240, 90, 90, 0.8) 51%,
+                rgba(255, 150, 150, 0.8) 100%
+            );
+            border-radius: 5px;
+            border: 1px solid #a12020;
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.6),
+                0 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 1px rgba(255,255,255,0.7);
+            min-width: 5px;
+        }
+        .button:hover {
+            background: linear-gradient(to bottom,
+                rgba(230, 80, 80, 0.8) 0%,
+                rgba(245, 120, 120, 0.8) 50%,
+                rgba(255, 170, 170, 0.8) 51%,
+                rgba(255, 200, 200, 0.8) 100%
+            );
+        }
+
+        .button:active {
+            background: linear-gradient(to bottom,
+                rgba(160, 20, 20, 0.8) 2%,
+                rgba(200, 40, 40, 0.8) 69%,
+                rgba(220, 60, 60, 0.8) 80%,
+                rgba(255, 150, 150, 0.8) 100%
+            );
+        }
+dialog {
+    width: 520px;
+    max-width: 90vw;
+    font-size: 16px;
+}
+
+dialog div {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+    </style>
+  </head>
+  
+  <body background="../chamf_imgs/lovecrap/Love_heart.jpg">
+<div style="display: none;">
+  <audio autoplay loop>
+    <source src="../mp3/love.mp3" type="audio/mpeg">
+  </audio>
+</div>
+    <p>Bruh</p>
+    <p>I will now reveal to you who my crush actually is:</p>
+    <center>
+      <p>Look at this cutie:</p>
+      <img src="../chamf_imgs/lovecrap/crush/Shocked.gif" width="256" height="256">
+      <img src="../chamf_imgs/lovecrap/crush/Crush.jpg" alt="The Picture Of Chris's Crush Soda can" width="420" height="420">
+      <img src="../chamf_imgs/lovecrap/crush/Shocked2.gif" width="256" height="256">
+      <div class="button-container">
+        <h2 class="button" onclick="alert('Well, too bad, not everyone will understand my strange sense of humor. ')">Not funny?</h2>
+        <h2 class="button" onclick="openDialog()">Who actually is it?</h2>
+      </div>
+      <h2><a href="../index.html" class="button">Go back to the homepage</a></h2>
+      <footer>
+        <p>&copy; 2024-2026 Hamfield518- All rights reserved, lefts preserved.</p>
+      </footer>
+    </center>
+
+    <!-- Dialog popup -->
+<dialog id="CrushInquiry">
+  <h1>Error 404! The variable &quot;my crush&quot; was not found in Chris's brain. Please try again later.</h1>
+  <div>
+    <button id="checkLogBtn">Why?</button>
+    <button id="closeBtn">OK</button>
+  </div>
+</dialog>
+<script>
+  const dialog = document.getElementById('CrushInquiry');
+  const checkLogBtn = document.getElementById('checkLogBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  function openDialog() {
+    dialog.showModal();
+  }
+  checkLogBtn.addEventListener('click', () => {
+    alert("The error is bollocks, who would actually reveal their crush on a publically accessible website? I ain't that stupid.");
+    dialog.close();
+  });
+  closeBtn.addEventListener('click', () => {
+    dialog.close();
+  });
+</script>
+  </body>
+</html>
