@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>The Crawlhatch</title>
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+  <style>
+/*Body*/
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #ccc;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/band.jpg");
+  background-size: cover;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+  /*The centered box effect*/
+.container {
+  width: 768px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #111;
+  box-shadow: 0 0 10px #000;
+  clip-path: polygon(
+    10px 0%, calc(100% - 10px) 0%, 
+    100% 10px, 100% calc(100% - 20px), 
+    calc(100% - 20px) 100%, 10px 100%, 
+    0% calc(100% - 10px), 0% 10px
+  );
+}
+
+/*Header crap*/
+header {
+  text-align: center;
+  padding: 0px;
+}
+
+header h1 {
+  font-size: 45px;
+  color: #c00;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'UnifrakturCook', serif;
+  font-weight: 700;
+  /*header runs away omg*/
+  animation: headerRuns 30s infinite ease-in-out;
+}
+
+@keyframes headerRuns {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(200px) rotate(0deg);
+  }
+  80% {
+    transform: translateX(100%) rotate(90deg);
+  }
+  90% {
+    transform: translateX(50%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+/*h2*/
+h2 {
+  font-size: 36px;
+  color: #c00;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'UnifrakturCook', serif;
+  font-weight: 700;
+}
+
+/*the h4*/
+h4 {
+  font-size: 15px;
+  color: #c00;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'UnifrakturCook', serif;
+  font-weight: 100;
+}
+
+/*The All Mighty PPs*/
+p {
+  font-size: 15px;
+  color: grey;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Sans', serif;
+  font-weight: 700;
+}
+
+/*h3?????*/
+h3 {
+  font-size: 12px;
+  color: red;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Sans', serif;
+  font-weight: 700;
+}
+
+/*list items*/
+li {
+  font-size: 15px;
+  color: grey;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Sans', serif;
+  font-weight: 700;
+}
+
+/*Navigacion del huesos*/
+nav {
+  margin: 10px 0;
+}
+
+.nav-tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #222;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+/*buttons, duh*/
+.nav-tabs li a {
+  display: block;
+  padding: 5px 10px;
+  color: #ccc;
+  background: linear-gradient(to bottom, #333, #111);
+  text-decoration: none;
+  border-right: 1px solid #444;
+  font-weight: bold;
+  font-family: 'UnifrakturCook', serif;
+  font-weight: 900;
+  /*the navbar buttons are tilting idk why I made them do that lol*/
+  animation: navTilt 2s infinite ease-in-out;
+}
+
+@keyframes navTilt {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(0) rotate(2deg);
+  }
+  80% {
+    transform: translateY(0) rotate(0deg);
+  }
+  90% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/*yeah yeah whatever lol, are you checking out my code?*/
+.nav-tabs li:last-child a {
+  border-right: none;
+}
+
+.nav-tabs li a:hover {
+  background: linear-gradient(to bottom, #444, #222);
+  color: #fff;
+}
+
+/*sections, the content styling.*/
+section {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 1px;
+}
+
+/*h2 varitation for sections.*/
+section h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  color: #c00;
+}
+
+/*band members*/
+.member {
+  display: inline-block;
+  width: 250px;
+  margin: 10px;
+  vertical-align: top;
+  background: #111;
+  padding: 10px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.member img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #333;
+  margin-bottom: 5px;
+}
+
+/*footer styling*/
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  border-top: 1px solid #333;
+  padding-top: 5px;
+}
+
+/*Link buttons - currently used for follow us online links.*/
+h1 a {
+  display: inline-block;
+  padding: 5px 10px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: green;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  /*The buttons have a farty-scale animation cause of course they do, ADHD man, oh yeah. Get those frames'!*/
+  animation: buttonScale 5s infinite ease-in-out;
+}
+
+@keyframes buttonScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+/*h6 is the link to my personal website.*/
+h6 a {
+  animation: h6Scale 2s infinite ease-in-out;
+  color: #FFC0CB;
+}
+
+h6 {
+  animation: h6Scale 2s infinite ease-in-out;
+  color: #FFC0CB;
+}
+
+@keyframes h6Scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/*the h1, extra crap that I can't be arsed moving back up where it belongs.*/
+h1 a:hover {
+  opacity: 0.85;
+}
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<!--Main Content for the website, all in here.-->
+<div class="container">
+  <header>
+    <h1>The Crawlhatch</h1>
+  </header>
+
+  <nav>
+    <ul class="nav-tabs">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#members">Band Members</a></li>
+      <li><a href="index.html#songs">Songs</a></li>
+      <li><a href="index.html#coversongs">Covers</a></li>
+      <li><a href="index.html#subscribe">Follow us online</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <center>
+      <img src="images/metal1.jpg" alt="Metal texture + text saying Metal" height=256 width=280>
+      <img src="images/Metalhead.gif" alt="metalhead dude shredding on guitar" height=256 width=280>
+    </center>
+    <p>The Crawlhatch is a one-man Alternative Rock/Metal band consisting of me, myself, the person who is me, and I...</p>
+    <p>The name is created out of the way I felt at that moment- Stuck in a hatch, underground, crawling back out to the surface.</p>
+    <p>Hencefore "The Crawlhatch" is the name for my one man band project.</p>
+    
+    <center>
+      <img src="images/confused.gif" alt="Confused man gif crosspaths" height="256" width=280>
+      <p>Made out of boredom, directed by hyperfocus.</p>
+      <p>I've composed a few experimental songs in 2025.</p>
+      <p>But then circumstances changed so I have decided to pause this project for now.</p>
+      <p>I might revive this project in around mid-2027 or later.</p>
+    </center>
+  </section>
+
+  <section id="members">
+    <h2>Band Members</h2>
+    <center>
+      <div class="member">
+        <img src="images/CH_Frontman.jpg" alt="CH_Frontman.jpg">
+        <p><strong>Christopher </strong>Hamfield</p>
+        <h4><strong>The Frontman -</strong> Vocals & Guitar</h4>
+      </div>
+      <div class="member">
+        <img src="images/CH_GTR2.jpg" alt="CH_GTR2.jpg">
+        <p><strong>M</strong>e</p>
+        <h4><strong> Secondary Guitarman, </strong> Backing Vocalist.</h4>
+      </div>
+      <div class="member">
+        <img src="images/CH_Drums.jpg" alt="CH_Drums.jpg">
+        <p><strong>My</strong>self</p>
+        <h4><strong>The</strong> Drummer</h4>
+      </div>
+      <div class="member">
+        <img src="images/CH_BASS.jpg" alt="CH_BASS.jpg">
+        <p><strong>The person</strong> who is I</p>
+        <h4><strong>The Truly Epic</strong> Bassist</h4>
+      </div>
+      <img src="images/cheering_minions.gif" alt="Cheering Minions">
+    </center>
+  </section>
+
+  <section id="songs">
+    <h2>Songs</h2>
+    <h3>"Demos 4 Shits & Giggles" (May 2025)</h3>
+    <ul>
+      <li>1. A Simple Rejection Of The Past</li>
+      <li>2. FunkySoundtrack1</li>
+      <li>3. Beautiful Hedgehog</li>
+      <li>4. Low Effort Hip-Hop Freestyle</li>
+    </ul>
+    <center>
+      <img src="images/pugpiano.gif" alt="Pug Playing Piano" width="512">
+    </center>
+  </section>
+
+  <section id="coversongs">
+    <h2>Cover Songs</h2>
+    <ul>
+      <li>Stigmata - Sentyabr (Ukr. Cover)</li>
+      <li>More cover songs coming soon...</li>
+      <li>.</li>
+    </ul>
+    <center>
+      <img src="images/gcar.gif" alt="Sad gurl sitting on a car, plucking petals of a flower. (Idk why this img)" width="512">
+    </center>
+  </section>
+
+  <section id="subscribe">
+    <h2>Keep up with our future releases</h2>
+    <section id="Follow us Online">
+
+    </section>
+    <ul>
+      <li>Work in progress...</li>
+          <center>
+      <h2>YouTube</h2>
+      <p>Subscribe to our YouTube channel.</p>
+      <img src="images/YTsub.gif" height=256 alt="YT Subscribe gif">
+      <h1><a href="https://www.youtube.com/@crawlhatch">Subscribe</a></h1>
+      <h2>Instagram</h2>
+      <p>Follow us on Instagram for more updates.</p>
+      <img src="images/Insta_logo.jpg" height=256 alt="Instagram Logo">
+      <h1><a href="https://www.instagram.com/crawlhatch/">Follow</a></h1>
+    </center>
+    </ul>
+  </section>
+
+  <footer>
+      <h5>This project is paused for now, don't expect updates before Mid-2027 (or later).</h5>
+    <h3>&copy; 2025-2026 The Crawlhatch band</h3>
+    <h6><a href="https://hamfield518.neocities.org">Check out C. Hamfield's Personal WebSite.</a></h6>
+  </footer>
+</div>
+</body>
+</html>
